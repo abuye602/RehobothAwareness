@@ -1,0 +1,8 @@
+#mission-banner {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: url("../img/mission.png") no-repeat center top / cover;
+}

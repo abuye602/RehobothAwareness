@@ -10,12 +10,16 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+const options = { index: "./index.html" };
+
 // Serve static files (HTML, CSS, etc.)
 app.use(express.static("public"));
+app.use(express.static("pages"));
 
 // Email sending route
 app.post("/send-email", (req, res) => {
   const { firstName, lastName, email, message } = req.body;
+  console.log(``);
 
   // Set up Nodemailer
   const transporter = nodemailer.createTransport({
@@ -75,6 +79,8 @@ app.post("/send-email", (req, res) => {
 });
 
 // Start the server
-app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
+const server = app.listen(3000, () => {
+  var port = server.address().port;
+
+  console.log("listening at http://localhost:%s", port);
 });

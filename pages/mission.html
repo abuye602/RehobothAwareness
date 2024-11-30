@@ -12,7 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="pages/index.css" />
+    <link rel="stylesheet" href="/index.css" />
+    <!-- <link rel="stylesheet" href="pages/index.css" /> -->
   </head>
   <body>
     <!-- Header/Nav -->
@@ -22,14 +23,20 @@
       /></a>
       <ul class="nav">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li>
+          <a class="dropdown">About</a>
+          <ul class="dropdown-menu">
+            <li><a href="what-we-do.html">What We Do</a></li>
+            <li><a href="who-we-are.html">Who We Are</a></li>
+          </ul>
+        </li>
         <li><a class="active" href="mission.html">Mission</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </header>
 
     <!-- Banner img -->
-    <section class="mission-banner">
+    <section class="banner-area" id="mission-banner">
       <div class="banner-img"></div>
     </section>
 

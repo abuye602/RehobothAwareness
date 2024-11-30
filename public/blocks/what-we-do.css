@@ -10,6 +10,10 @@
   padding: 20px 40px 0;
 }
 
+.about-content h4 {
+  text-transform: uppercase;
+}
+
 .about-content h4,
 .about-content p {
   padding: 0;
@@ -17,11 +21,34 @@
   text-align: left;
 }
 
+#about-mission li {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px 0 20px;
+}
+
+#about-mission li p {
+  max-width: 30rem;
+}
+
+#about-mission img {
+  height: 30rem;
+  width: 30rem;
+  border-radius: 2px;
+}
+
+#about-me {
+  padding-top: 5rem;
+}
+
 .mission-area {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding-top: 7rem;
+  padding-top: 15rem;
+}
+
+#mission-content {
+  object-fit: cover;
 }
 
 .mission-content {
@@ -36,6 +63,10 @@
   width: 40rem;
   object-fit: cover;
   border-radius: 410px;
+}
+
+#mission-content img {
+  object-fit: fill;
 }
 
 .mission-img_1 .about-content {
@@ -59,6 +90,7 @@
 .mission-content li {
   display: flex;
   justify-content: space-between;
+  gap: 20rem;
 }
 
 .mission-content div {

@@ -1,8 +1,13 @@
+/*
 @import url("../blocks/home.css");
-@import url("../blocks/about.css");
+@import url("../blocks/what-we-do.css");
 @import url("../blocks/mission.css");
 @import url("../blocks/contact.css");
-
+*/
+@import url("../blocks/home.css");
+@import url("../blocks/what-we-do.css");
+@import url("../blocks/mission.css");
+@import url("../blocks/contact.css");
 * {
   margin: 0;
   padding: 0;
@@ -34,18 +39,17 @@ a {
 }
 
 header {
+  position: absolute; /* Position the header on top of the banner */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Adjust the height as needed */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
+  z-index: 1000; /* Ensure it appears above the banner */
   color: white;
-  font-weight: 200;
-  padding: 35px 20px;
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  height: 13%;
 }
 
 header ul.nav {
@@ -93,6 +97,7 @@ header ul.nav li {
 /* Active state - this applies to the current page */
 .nav li a.active {
   color: #caa084;
+  background-image: white;
 }
 
 /* Ensure the underline stays on the active link */
@@ -106,14 +111,36 @@ header ul.nav li {
   left: 0;
 }
 
-.banner-img {
+.nav li {
+  position: relative;
+}
+
+.nav li .dropdown-menu a::after {
+  content: none;
+}
+
+.dropdown-menu {
+  display: none;
+  z-index: 1000;
   position: absolute;
-  top: -20%;
   left: 0;
-  width: 100%;
-  height: 80%;
-  background-size: cover;
-  background-position: center top;
+  top: 100%;
+  min-width: 100px;
+  padding-top: 10px;
+}
+
+.dropdown-menu a {
+  min-width: 100px;
+  top: 10px;
+  right: 30px;
+}
+
+.dropdown-menu li:nth-child(2) {
+  padding-top: 20px;
+}
+
+.nav li:hover .dropdown-menu {
+  display: block;
 }
 
 .banner-img::before {
@@ -122,7 +149,7 @@ header ul.nav li {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.7),
@@ -136,4 +163,13 @@ header ul.nav li {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 50px;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px 40px;
+  color: #000;
+  z-index: 10;
 }
