@@ -28,45 +28,33 @@ document
     // Use Fetch to send form data to server
     fetch("/send-email", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        firstName: document.getElementById("first-name").value.trim(),
+        lastName: document.getElementById("last-name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        message: document.getElementById("message").value.trim(),
+      }),
     })
-      .then((response) => {
-        if (response.ok) {
-          return response.text();
-        } else {
-          throw new Error("Failed to send email");
+      .then(async (res) => {
+        if (!res.ok) {
+          const text = await res.text();
+          throw new Error(text || "Server error");
         }
+        return res.text();
       })
-      .then((data) => {
-        // Display success message without redirecting
+      .then(() => {
         const feedbackMessage = document.getElementById("feedback-message");
-        feedbackMessage.textContent = "Email was sent!!";
-        feedbackMessage.style.color = "black";
-        feedbackMessage.style.fontWeight = 300;
+        feedbackMessage.textContent =
+          "Message sent! We'll get back to you soon.";
+        feedbackMessage.style.color = "green";
         feedbackMessage.style.display = "block";
-        console.log("Success:", data);
 
-        // Change button text back to "Submit" and re-enable it
-        submitButton.textContent = "Submit";
-        submitButton.disabled = false;
-
-        // Scroll to top of the page
-        setTimeout(() => {
-          window.scrollTo({ top: 0, behavior: "instant" });
-        }, 1000);
-
-        // Wait for 2 seconds to show success message, then reload the page
-        setTimeout(() => {
-          window.location.reload(); // This will reload the page
-        }, 1000); // 2 seconds delay before reloading the page
+        setTimeout(() => window.location.reload(), 1000);
       })
       .catch((error) => {
         console.log("Error:", error);
 
-        // Display error message
         const feedbackMessage = document.getElementById("feedback-message");
         feedbackMessage.textContent = "Failed to send email. Please try again";
         feedbackMessage.style.color = "red";

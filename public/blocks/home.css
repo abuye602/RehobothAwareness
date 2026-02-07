@@ -5,7 +5,15 @@ header button:active {
 
 /* banner area */
 
+.about-area p {
+  content: none;
+  padding: 0 20px 0;
+  margin: 0;
+  font-weight: 300;
+}
+
 section p {
+  font-size: 20px;
   max-width: 800px;
   text-align: center;
   margin-bottom: 35px;
@@ -28,23 +36,16 @@ section p {
   background: url("../img/home.png") no-repeat center center/cover;
 } */
 
-#about {
-  padding: 50px 40px;
-  text-align: center;
-  background-color: #f9f9f9;
-  margin-top: 0; /* Removes any overlap */
-}
-
 .about-btn {
   padding: 25px 50px;
   font-size: 15px;
   background: #a3826c;
-  border-radius: 2px;
+  border-radius: 4px;
   border: none;
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .about-btn:hover {
@@ -55,12 +56,12 @@ section p {
 .home-section {
   display: flex;
   justify-content: center;
-  padding: 0 0 20rem;
+  padding: 0;
 }
 
 section ul .home-img_1 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -70,8 +71,8 @@ section ul .home-img_1 {
 
 section #home-content p {
   font-size: 25px;
-  font-weight: 500;
   text-align: center;
+  padding: 20px 30px 0;
 }
 
 .home-img_1 img {

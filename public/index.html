@@ -1,0 +1,158 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rehoboth</title>
+
+    <!-- Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/blocks/index.css" />
+    <!-- <link rel="stylesheet" href="pages/index.css" /> -->
+  </head>
+
+  <body>
+    <!-- Header/Nav -->
+    <header>
+      <a href="index.html">
+        <img src="img/business card.pdf (1).png" class="logo" alt="Logo" />
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-controls="siteNav"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open menu</span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Nav -->
+      <ul class="nav" id="siteNav">
+        <img class="navlogo" src="img/darklogo.png" alt="" />
+        <li><a class="active" href="index.html">Home</a></li>
+
+        <!-- <li class="nav-about"> -->
+
+        <!-- use a button for mobile (better UX than <a> with no href) -->
+        <!-- <button class="dropdown-btn" type="button" aria-expanded="false">
+            About
+          </button> -->
+        <!-- 
+          <ul class="dropdown-menu">
+            <li><a href="who-we-are.html">Who We Are</a></li>
+          </ul> -->
+        <!-- </li> -->
+        <li><a href="what-we-do.html">About</a></li>
+        <li><a href="mission.html">Mission</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+        <li class="nav-donate-wrapper">
+          <details class="donate-dropdown" id="donateDropdown">
+            <summary class="nav-donate">Donate</summary>
+
+            <div
+              class="donate-panel"
+              role="dialog"
+              aria-label="Donate via Zelle"
+            >
+              <p class="donate-title">Support Our Mission</p>
+              <p class="donate-subtitle">Secure donation via Zelle</p>
+
+              <img
+                src="img/Zelle.png"
+                alt="Zelle QR code for Rehoboth Awareness Network"
+                class="donate-qr"
+              />
+
+              <p class="donate-handle">
+                Zelle: <strong>your email or phone</strong>
+              </p>
+
+              <a
+                class="btn btn-donate-panel"
+                href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiUkVIT0JPVEggQVdBUkVORVNTIE5FVFdPUksiLCJhY3Rpb24iOiJwYXltZW50IiwidG9rZW4iOiI0ODAyOTI1NTQ5In0="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open Zelle
+              </a>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </header>
+
+    <!-- Banner img -->
+    <section class="banner-area" id="home-banner">
+      <div class="banner-img"></div>
+    </section>
+
+    <!-- about Section -->
+    <section class="about-area" id="about">
+      <h3 class="about-title">Advocacy</h3>
+      <div class="about-actions">
+        <p>
+          ​The Rehoboth Awareness Network is dedicated to serving children with
+          disabilities, primarily autism. We work to create a welcoming,
+          faith-based community that embraces individuals with autism and their
+          families.
+        </p>
+        <a href="mission.html">
+          <button class="about-btn">Learn More</button>
+        </a>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <ul>
+        <li class="home-img_1">
+          <img src="img/autism.png" alt="" />
+          <div class="about-content" id="home-content">
+            <p>
+              Autism is a spectrum disorder and neurodevelopmental diseases that
+              causes problems in thinking feelings language and social skills
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- About Director Section -->
+    <section class="mission-area" id="Elsa">
+      <ul id="about-mission">
+        <li class="mission-img_1">
+          <img src="img/Elsa2.png" alt="" />
+          <div class="about-content" id="about-me">
+            <h4>Elsabet Daniel</h4>
+            <h5>(Founder and Director of Rehoboth Awareness Network)</h5>
+            <p>
+              My Name is Elsabet Daniel I am. Human Behavior Degree, Behavioral
+              Health, I will advocate for special needs children and their
+              parents to assist them, support, empower, and educate the
+              community. My knowledge and experience in the community to reach
+              more families and children struggling with Autism Engage in
+              community outreach activities regarding autism awareness.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>All Rights Reserved by Rehoboth Awareness Network</p>
+    </footer>
+
+    <script src="navbar.js"></script>
+  </body>
+</html>

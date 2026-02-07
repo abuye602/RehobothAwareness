@@ -8,6 +8,16 @@
   background: url("../img/contact.png") no-repeat center center / cover;
 }
 
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 50px 40px;
+  color: #000;
+  z-index: 10;
+  gap: 10px;
+}
+
 /* Contact Section */
 
 .about-email,
@@ -50,7 +60,6 @@ textarea {
   font-weight: 200;
   min-height: 50px;
   padding: 15px;
-  padding: 10px;
   border: 1px solid #9c9b9b;
   width: 100%;
   box-sizing: border-box;
@@ -85,12 +94,13 @@ textarea:focus {
 }
 
 .contact-btn {
-  padding: 20px 30px;
+  padding: 20px 40px;
   background-color: #a3826c;
   color: white;
   border: none;
+  border-radius: 6px;
   font-size: 17px;
-  font-weight: 300px;
+  font-weight: 300;
   cursor: pointer;
 }
 
@@ -99,9 +109,134 @@ textarea:focus {
   transition: 0.3s;
 }
 
+input,
+textarea {
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  background-color: #f9f9f9;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #a3826c;
+  box-shadow: 0 0 0 3px rgba(163, 130, 108, 0.2);
+}
+
+/* -----------------------------
+   CONTACT RESPONSIVE
+   Put at bottom of contact.css
+------------------------------ */
+
+@media (max-width: 991px) {
+  .about-email,
+  .about-phone {
+    font-size: 20px;
+  }
+
+  section {
+    padding: 40px 24px;
+  }
+
+  input,
+  textarea {
+    font-size: 16px;
+  }
+}
+
 /* Add responsive behavior */
 @media (max-width: 768px) {
+  /* or even 0 if you want it gone */
+
   .name-inputs {
-    flex-direction: column; /* Stack inputs on smaller screens */
+    flex-direction: row; /* stack */
+    gap: 12px;
+    /* Stack inputs on smaller screens */
+  }
+
+  .name-inputs input {
+    padding: 15px;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  #contact-banner {
+    height: 40vh; /* instead of 80vh */
+    min-height: 220px;
+  }
+
+  #contact-area {
+    align-items: stretch;
+    gap: 28px;
+  }
+
+  /* keep BOTH blocks same width */
+  #contact-area > div:first-child,
+  #contact-area .form-container {
+    max-width: 560px;
+    width: 100%;
+    margin: 0 auto; /* centers the whole block */
+  }
+
+  /* but keep text left-aligned */
+  #contact-area .about {
+    text-align: left;
+  }
+
+  #contact-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.15)
+    );
+  }
+
+  #contact-banner {
+    height: 60vh;
+  }
+
+  .about p {
+    padding: 0 0 20px;
+  }
+
+  .contact-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  input,
+  textarea {
+    font-size: 15px;
+    min-height: 46px;
+  }
+
+  .name-inputs {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 385px) {
+  .about p {
+    font-size: 16px;
+  }
+}
+
+/* Landscape phones */
+@media (max-width: 900px) and (orientation: landscape) {
+  #contact-banner {
+    height: 85vh;
   }
 }

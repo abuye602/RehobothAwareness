@@ -1,3 +1,216 @@
+.service-actions.vertical {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column; /* 👈 key */
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.meta-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  background: rgba(111, 111, 111, 0.947);
+  color: #fff;
+}
+
+.meta-day {
+  font-weight: 500;
+}
+
+.meta-times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.meta-times .dot {
+  opacity: 0.5;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  background: #a3826c;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* Spiritual Support */
+
+/* Community Building */
+/* Dropdown container */
+.service-details {
+  margin-top: 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 12px 14px;
+}
+
+/* Dropdown button (summary) */
+.service-details summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 6px 8px 0;
+}
+
+.service-details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Rotate chevron when open */
+.service-details .chev {
+  transition: transform 0.15s ease;
+  opacity: 0.8;
+}
+.service-details[open] .chev {
+  transform: rotate(180deg);
+}
+
+/* Body spacing */
+.details-body {
+  margin-top: 10px;
+}
+
+/* Intro text */
+.community-body {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+/* Grouping (optional) */
+.link-group {
+  margin-top: 14px;
+}
+.group-title {
+  margin: 0 0 10px 0;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+/* The link “card” */
+.resource-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 10px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.resource-link:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* Left text stack */
+.resource-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.resource-title {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.resource-subtitle {
+  display: flex;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* External icon */
+.resource-icon {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* Vertical list */
+.connections-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Individual links */
+.connections-list a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.connections-list a:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+}
+
+.community-body {
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 100px;
+}
+
+.btn-rf {
+  margin-top: 10px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+/* done */
+#Elsa,
+.content-area {
+  background-color: #f9f9f9;
+  color: black;
+  padding-top: 5rem;
+}
+
 .about-header,
 #about-area,
 .mission-area,
@@ -34,17 +247,17 @@
 #about-mission img {
   height: 30rem;
   width: 30rem;
-  border-radius: 2px;
+  border-radius: 10px;
 }
 
 #about-me {
-  padding-top: 5rem;
+  padding-left: 4rem;
 }
 
 .mission-area {
   display: flex;
   flex-direction: column;
-  padding-top: 15rem;
+  padding-top: 10rem;
 }
 
 #mission-content {
@@ -90,19 +303,190 @@
 .mission-content li {
   display: flex;
   justify-content: space-between;
-  gap: 20rem;
+  gap: 10rem;
 }
 
-.mission-content div {
+.mission-content .about-content {
   padding-top: 50px;
 }
 
 .mission-area h4 {
   font-size: 40px;
   font-weight: 500;
+}
+.mission-area h5 {
+  font-size: 15px;
+  font-weight: 500;
   padding-bottom: 25px;
 }
 
 .mission-area p {
   font-weight: 200;
+}
+
+/* -----------------------------
+   WHAT-WE-DO RESPONSIVE
+   Put at bottom of what-we-do.css
+------------------------------ */
+@media (max-width: 1275px) {
+  .mission-content img {
+    height: 24rem;
+    width: 35rem;
+  }
+  .mission-content li {
+    gap: 7rem;
+  }
+}
+
+@media (max-width: 1146px) {
+  .mission-content img {
+    height: 22rem;
+    width: 32rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .mission-content img {
+    height: 19rem;
+    width: 29rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .mission-content img {
+    height: 18rem;
+    width: 28rem;
+  }
+
+  .mission-content li {
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .mission-area {
+    padding-top: 9rem; /* was 15rem */
+  }
+
+  .mission-content li {
+    gap: 4rem; /* was 10rem */
+  }
+
+  .mission-content img {
+    height: 16rem; /* reduce */
+    width: 26rem; /* reduce */
+  }
+
+  .mission-area h4 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 810px) {
+  .mission-content img {
+    height: 14rem;
+    width: 24rem;
+  }
+
+  .mission-content li {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-actions.vertical {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .pill {
+    font-size: 12px;
+  }
+
+  .meta-block {
+    font-size: 12px;
+  }
+
+  .btn {
+    font-size: 15px;
+  }
+
+  .mission-area {
+    padding-top: 6rem;
+  }
+
+  .mission-content {
+    margin-bottom: 3rem;
+  }
+
+  /* Stack image + text */
+  .mission-content li,
+  .mission-img_2 {
+    flex-direction: column;
+  }
+
+  .mission-content li {
+    gap: 18px;
+  }
+
+  .mission-content img {
+    width: 100%;
+    max-width: 640px; /* caps it on large screens */
+    height: auto; /* preserves aspect ratio */
+    aspect-ratio: 16 / 9; /* optional but highly recommended */
+    object-fit: cover;
+    border-radius: 28px;
+  }
+
+  .mission-img_1 .about-content,
+  .mission-img_2 .about-content,
+  .mission-img_3 div {
+    width: 100%;
+    text-align: left;
+  }
+
+  .mission-content .about-content {
+    padding-top: 10px; /* was 50px */
+  }
+
+  .mission-area h4 {
+    padding-bottom: 7px;
+    font-size: 25px;
+  }
+
+  .mission-area p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 640px;
+  }
+
+  /* Prayer/links blocks should not overflow */
+  .meta-times {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 420px) {
+  .mission-content img {
+    height: 200px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .mission-area {
+    padding-bottom: 0;
+  }
+}
+
+/* Landscape phones */
+@media (max-width: 900px) and (orientation: landscape) {
+  .mission-area {
+    padding-top: 8rem;
+  }
 }

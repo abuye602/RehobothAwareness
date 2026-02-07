@@ -1,0 +1,301 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Rehoboth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/blocks/index.css" />
+    <!-- <link rel="stylesheet" href="pages/index.css" /> -->
+  </head>
+  <body>
+    <!-- Header/Nav -->
+    <header class="about-header">
+      <a href="index.html"
+        ><img src="img/business card.pdf (1).png" class="logo" alt="Logo"
+      /></a>
+
+      <!-- Mobile hamburger -->
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-controls="siteNav"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open menu</span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav" id="siteNav">
+        <img class="navlogo" src="img/darklogo.png" alt="" />
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a class="active" href="what-we-do.html">About</a>
+          <!-- <li class="nav-about"> -->
+
+          <!-- use a button for mobile (better UX than <a> with no href) -->
+          <!-- <button class="dropdown-btn" type="button" aria-expanded="false">
+            About
+          </button> -->
+          <!-- 
+          <ul class="dropdown-menu">
+            <li><a href="who-we-are.html">Who We Are</a></li>
+          </ul> -->
+          <!-- </li> -->
+        </li>
+
+        <li><a href="mission.html">Mission</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-donate-wrapper">
+          <details class="donate-dropdown" id="donateDropdown">
+            <summary class="nav-donate">Donate</summary>
+
+            <div class="donate-panel">
+              <p class="donate-title">Support Our Mission</p>
+              <p class="donate-subtitle">Secure donation via Zelle</p>
+
+              <img
+                src="img/Zelle.png"
+                alt="Zelle QR code for Rehoboth Awareness Network"
+                class="donate-qr"
+              />
+
+              <p class="donate-handle">
+                Zelle: <strong>your email or phone</strong>
+              </p>
+
+              <a
+                class="btn btn-donate-panel"
+                href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiUkVIT0JPVEggQVdBUkVORVNTIE5FVFdPUksiLCJhY3Rpb24iOiJwYXltZW50IiwidG9rZW4iOiI0ODAyOTI1NTQ5In0="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open Zelle
+              </a>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </header>
+
+    <!-- Service Section -->
+    <section class="mission-area">
+      <ul class="mission-content">
+        <li class="mission-img_1">
+          <img src="img/spiritual.png" alt="" />
+          <div class="about-content">
+            <h4>Spiritual Support</h4>
+            <p>
+              Offering prayer, spiritual guidance, and faith-based counseling to
+              help families cope with the emotional and spiritual aspects of
+              raising a child with autism.
+            </p>
+            <div class="service-actions vertical">
+              <!-- Row 1 -->
+              <span class="pill">Prayer Has Power</span>
+
+              <!-- Row 2 -->
+              <div class="meta-block">
+                <div class="meta-day">Every Thursday</div>
+                <div class="meta-times">
+                  <span><strong>Phoenix:</strong> 11:00 AM</span>
+                  <span class="dot">•</span>
+                  <span><strong>EST:</strong> 1:00 PM</span>
+                  <span class="dot">•</span>
+                  <span><strong>Ethiopia:</strong> 9:00 PM</span>
+                </div>
+              </div>
+
+              <!-- Row 3 -->
+              <a
+                class="btn btn-telegram"
+                href="https://t.me/+qEI-77GIekoyMGI0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join on Telegram
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="mission-content">
+        <li class="mission-img_2">
+          <img src="img/community.png" alt="" />
+          <div class="about-content">
+            <h4>Community Building</h4>
+            <p>
+              Creating a supportive community for individuals with autism and
+              their families, providing opportunities for socialization,
+              connection, and fellowship within a faith setting.
+            </p>
+            <details class="service-details">
+              <summary>
+                <span>Connections</span>
+                <span class="chev" aria-hidden="true">▾</span>
+              </summary>
+
+              <div class="details-body">
+                <p class="community-body">
+                  Click the links below to learn more and connect with community
+                  organizations.
+                </p>
+
+                <!-- (Optional) Group header -->
+                <div class="link-group">
+                  <p class="group-title">Church & Special Needs Ministries</p>
+
+                  <a
+                    class="resource-link"
+                    href="https://highlandschurch.org/specialneeds/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="resource-text">
+                      <span class="resource-title">Highlands Church</span>
+                      <span class="resource-subtitle">External resource</span>
+                    </div>
+                    <span class="resource-icon" aria-hidden="true">↗</span>
+                  </a>
+
+                  <a
+                    class="resource-link"
+                    href="https://bereaministry.org/prayers/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="resource-text">
+                      <span class="resource-title">Berea Ministry</span>
+                      <span class="resource-subtitle">External resource</span>
+                    </div>
+                    <span class="resource-icon" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+
+                <!-- (Optional) Group header -->
+                <div class="link-group">
+                  <p class="group-title">Advocacy & Family Support</p>
+
+                  <a
+                    class="resource-link"
+                    href="https://reachfamilies.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="resource-text">
+                      <span class="resource-title"
+                        >Reaching Families Advocacy & Support</span
+                      >
+                      <span class="resource-subtitle">External resource</span>
+                    </div>
+                    <span class="resource-icon" aria-hidden="true">↗</span>
+                  </a>
+
+                  <a
+                    class="resource-link"
+                    href="https://joniandfriends.org/about/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="resource-text">
+                      <span class="resource-title">Joni and Friends</span>
+                      <span class="resource-subtitle">External resource</span>
+                    </div>
+                    <span class="resource-icon" aria-hidden="true">↗</span>
+                  </a>
+
+                  <a
+                    class="resource-link"
+                    href="https://encirclefamilies.org/services/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="resource-text">
+                      <span class="resource-title">Encircle Families</span>
+                      <span class="resource-subtitle">External resource</span>
+                    </div>
+                    <span class="resource-icon" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+            </details>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="mission-content">
+        <li class="mission-img_3">
+          <img src="img/inclusive_worship.png" alt="" />
+          <div class="about-content">
+            <h4>Inclusive Worship</h4>
+            <p>
+              Providing inclusive environments for individuals with autism to
+              participate in religious services, events, and activities. This
+              may involve sensory-friendly services, special accommodations, or
+              programs tailored to the needs of those with ASD.
+            </p>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="mission-content" id="mission-content">
+        <li class="mission-img_2">
+          <img src="img/education.png" alt="" />
+          <div class="about-content">
+            <h4>Educational Resources</h4>
+            <p>
+              Offering resources to help families navigate both the practical
+              and spiritual aspects of autism, such as information on therapy
+              options, IEPs (Individualized Education Plans), or other
+              autism-related topics, all framed through the lens of faith.
+            </p>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="mission-content">
+        <li class="mission-img_3">
+          <img src="img/advocacy_about.png" alt="" />
+          <div class="about-content">
+            <h4>Advocacy</h4>
+            <p>
+              Advocating for individuals with autism within the broader
+              religious community, promoting awareness, understanding, and
+              inclusion.
+            </p>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="mission-content">
+        <li class="mission-img_2">
+          <img src="img/support.png" alt="" />
+          <div class="about-content">
+            <h4>Support for Caregivers</h4>
+            <p>
+              Providing emotional and spiritual support for parents, siblings,
+              and other caregivers, recognizing the unique challenges they face
+              and offering a network of care and encouragement.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>All Rights Reserved by Rehoboth Awareness Network</p>
+    </footer>
+    <script src="navbar.js"></script>
+  </body>
+</html>

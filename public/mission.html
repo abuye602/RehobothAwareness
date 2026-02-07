@@ -1,0 +1,113 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Rehoboth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/blocks/index.css" />
+    <!-- <link rel="stylesheet" href="pages/index.css" /> -->
+  </head>
+  <body>
+    <!-- Header/Nav -->
+    <header>
+      <a href="index.html"
+        ><img src="img/business card.pdf (1).png" class="logo" alt="Logo"
+      /></a>
+
+      <!-- Mobile hamburger -->
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-controls="siteNav"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open menu</span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav" id="siteNav">
+        <img class="navlogo" src="img/darklogo.png" alt="" />
+
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="what-we-do.html">About</a>
+          <!-- <li class="nav-about"> -->
+
+          <!-- use a button for mobile (better UX than <a> with no href) -->
+          <!-- <button class="dropdown-btn" type="button" aria-expanded="false">
+            About
+          </button> -->
+          <!-- 
+          <ul class="dropdown-menu">
+            <li><a href="who-we-are.html">Who We Are</a></li>
+          </ul> -->
+          <!-- </li> -->
+        </li>
+        <li><a class="active" href="mission.html">Mission</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-donate-wrapper">
+          <details class="donate-dropdown" id="donateDropdown">
+            <summary class="nav-donate">Donate</summary>
+
+            <div class="donate-panel">
+              <p class="donate-title">Support Our Mission</p>
+              <p class="donate-subtitle">Secure donation via Zelle</p>
+
+              <img
+                src="img/Zelle.png"
+                alt="Zelle QR code for Rehoboth Awareness Network"
+                class="donate-qr"
+              />
+
+              <p class="donate-handle">
+                Zelle: <strong>your email or phone</strong>
+              </p>
+
+              <a
+                class="btn btn-donate-panel"
+                href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiUkVIT0JPVEggQVdBUkVORVNTIE5FVFdPUksiLCJhY3Rpb24iOiJwYXltZW50IiwidG9rZW4iOiI0ODAyOTI1NTQ5In0="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open Zelle
+              </a>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </header>
+
+    <!-- Banner img -->
+    <section class="banner-area" id="mission-banner">
+      <div class="banner-img"></div>
+    </section>
+
+    <!-- about Section -->
+    <section class="about-area" id="about">
+      <h3 class="about-title">Mission</h3>
+      <p>
+        Our goal is to build a strong, faith-based community in Ethiopia,
+        Eritrea and other African nations that promote spiritual growth, unity,
+        compassion, and positive social transformation for children who have
+        autism and their family. We will also provide support and education for
+        parents of children with autism or other special needs.
+      </p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>All Rights Reserved by Rehoboth Awareness Network</p>
+    </footer>
+    <script src="navbar.js"></script>
+  </body>
+</html>
