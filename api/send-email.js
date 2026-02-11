@@ -1,15 +1,16 @@
 const nodemailer = require("nodemailer");
 
 module.exports = async (req, res) => {
-  // Allow only POST
-  if (req.method !== "POST") {
-    return res.status(405).send("Method not allowed");
-  }
+  // CORS/preflight safety (usually not needed for same-domain, but harmless)
+  if (req.method === "OPTIONS") return res.status(204).end();
+  if (req.method !== "POST") return res.status(405).send("Method not allowed");
 
   try {
-    // Vercel usually parses JSON for you, but this makes it bulletproof:
+    // Vercel usually parses JSON, but this makes it bulletproof
     const body =
-      typeof req.body === "string" ? JSON.parse(req.body) : req.body || {};
+      typeof req.body === "string"
+        ? JSON.parse(req.body || "{}")
+        : req.body || {};
 
     const { firstName, lastName, email, message } = body;
 
@@ -18,7 +19,7 @@ module.exports = async (req, res) => {
     }
 
     if (!process.env.MAIL_USER || !process.env.MAIL_PASS) {
-      return res.status(500).send("Missing server email config");
+      return res.status(500).send("Server mail env vars not set");
     }
 
     const transporter = nodemailer.createTransport({
@@ -41,7 +42,7 @@ module.exports = async (req, res) => {
 
     return res.status(200).send("OK");
   } catch (err) {
-    console.error(err);
+    console.error("send-email error:", err);
     return res.status(500).send("Failed to send email");
   }
 };
