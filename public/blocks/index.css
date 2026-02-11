@@ -316,6 +316,13 @@ img {
   width: 45%;
 }
 
+.mission-area span {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+
 /* ====== Large desktops (1200px+) ====== */
 @media (min-width: 1200px) {
   header ul.nav li {
