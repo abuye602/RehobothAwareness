@@ -26,8 +26,6 @@ module.exports = async (req, res) => {
     }
 
     const submittedAt = new Date().toLocaleString();
-    const refId = `RAN-${Date.now()}`;
-
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: { user: MAIL_USER, pass: MAIL_PASS },
@@ -35,12 +33,12 @@ module.exports = async (req, res) => {
 
     // 1) Email to you (admin)
     await transporter.sendMail({
-      from: `"Rehoboth Website" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER, // Where you want to receive emails
-      replyTo: `${firstName} ${lastName} <${email}>`, // ✅ when you hit Reply, it goes to the user
+      from: `"Rehoboth Website" <${MAIL_USER}>`,
+      to: MAIL_TO,
+      replyTo: `${firstName} ${lastName} <${email}>`,
       subject: `Contact Form Submission from ${firstName} ${lastName}`,
       html: `
-    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd;">
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd;">
       <h2 style="color: #088178; text-align: center;">New Contact Form Submission</h2>
       <p style="font-size: 16px; color: #333;">You have received a new message from your contact form:</p>
       <table style="width: 100%; border-collapse: collapse;">
@@ -64,19 +62,16 @@ module.exports = async (req, res) => {
       <p style="font-size: 14px; color: #555; text-align: center; margin-top: 20px;">
         This email was sent from your website's contact form.
       </p>
-    </div>
-  `,
-      text: `Message from ${firstName} ${lastName} (${email}):\n\n${message}`, // Include user's email in the body
+    </div>`,
     });
 
     // 2) Confirmation email to user
     await transporter.sendMail({
-      from: `"Rehoboth Awareness Network" <${process.env.EMAIL_USER}>`,
+      from: `"Rehoboth Awareness Network" <${MAIL_USER}>`,
       to: email,
       subject: "We received your message!",
-      text: `Hi ${firstName},\n\nWe received your message and will respond soon.\n\nYour message:\n${message}\n\n— Rehoboth Awareness Network`,
       html: `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 24px; border: 1px solid #ddd;">
+       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 24px; border: 1px solid #ddd;">
         <h2 style="text-align:center; color:#088178;">Message Received!</h2>
   
         <p>Hi <strong>${firstName}</strong>,</p>
@@ -121,23 +116,23 @@ module.exports = async (req, res) => {
         This email was sent automatically from our website contact form.
         </p>
       </div>
-    `,
+      `,
       text: `
-  Hi ${firstName},
+      Hi ${firstName},
+
+      Thank you for contacting Rehoboth Awareness Network.
+      This email confirms that we’ve received your message.
   
-  Thank you for contacting Rehoboth Awareness Network.
-  This email confirms that we’ve received your message.
+      Submitted on: ${submittedAt}
+      Email: ${email}
   
-  Submitted on: ${submittedAt}
-  Email: ${email}
+      Your message:
+      ${message}
+      
+      We typically respond within 1–2 business days.
+      If your message is urgent, you may reply directly to this email.
   
-  Your message:
-  ${message}
-  
-  We typically respond within 1–2 business days.
-  If your message is urgent, you may reply directly to this email.
-  
-  — Rehoboth Awareness Network
+    — Rehoboth Awareness Network
   
   `,
     });
