@@ -32,3 +32,4 @@ The site is designed with accessibility, clarity, and responsiveness in mind acr
 - **Node.js** – Backend email handling
 - **Nodemailer** – Contact form email delivery
 - **Vercel** – Hosting and serverless deployment
+# RehobothAwareness
