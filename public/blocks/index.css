@@ -465,6 +465,38 @@ img {
   box-shadow: 0 6px 18px rgba(163, 130, 108, 0.45);
 }
 
+/* ===== Elsabet section verse formatting ===== */
+#about-me {
+  display: flex;
+  flex-direction: column;
+}
+
+#about-me p,
+.elsa-verse {
+  max-width: 620px;
+}
+
+.elsa-verse {
+  margin-top: 22px;
+  padding-left: 16px;
+  border-left: 4px solid #a3826c;
+  font-style: italic;
+  color: #444;
+  line-height: 1.6;
+}
+
+.elsa-verse__ref {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.elsa-verse__text {
+  display: block;
+}
+
 @media (max-width: 810px) {
   section #home-content p {
     font-size: 23px;
