@@ -312,6 +312,10 @@ img {
   display: none;
 }
 
+.home-img_1 img {
+  width: 45%;
+}
+
 /* ====== Large desktops (1200px+) ====== */
 @media (min-width: 1200px) {
   header ul.nav li {
