@@ -7,7 +7,7 @@
   background: url("../img/mission.png") no-repeat center top / cover;
 }
 
-@media (max-width: 377px) {
+@media (max-width: 407px) {
   #about p {
     padding: 0;
   }
