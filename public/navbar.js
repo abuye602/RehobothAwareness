@@ -7,19 +7,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const donateDropdown = document.getElementById("donateDropdown");
 
+  let scrollY = 0;
+
   function openMenu() {
+    scrollY = window.scrollY;
     nav.classList.add("is-open");
     toggleBtn.classList.add("is-open");
     toggleBtn.setAttribute("aria-expanded", "true");
-    document.body.classList.add("menu-open"); // ✅ lock scroll
+    document.documentElement.classList.add("menu-open"); // html
+    document.body.classList.add("menu-open");
+    // lock at current scroll position
+    document.body.style.top = `-${scrollY}px`;
   }
 
   function closeMenu() {
     nav.classList.remove("is-open");
     toggleBtn.classList.remove("is-open");
     toggleBtn.setAttribute("aria-expanded", "false");
-    document.body.classList.remove("menu-open"); // ✅ unlock scroll
-
+    document.documentElement.classList.remove("menu-open");
+    document.body.classList.remove("menu-open");
+    // unlock + restore scroll position
+    document.body.style.top = "";
+    window.scrollTo(0, scrollY);
     aboutItem?.classList.remove("open");
     aboutBtn?.setAttribute("aria-expanded", "false");
     if (donateDropdown) donateDropdown.open = false;

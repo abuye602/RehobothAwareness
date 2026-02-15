@@ -604,8 +604,22 @@ img {
     background-color: white;
   }
 
+  .nav.is-open {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 100vh;
+  }
+
+  html.menu-open,
   body.menu-open {
+    height: 100%;
+  }
+
+  body.menu-open {
+    position: fixed;
+    width: 100%;
     overflow: hidden;
+    touch-action: none;
   }
 
   header ul.nav {
@@ -638,6 +652,7 @@ img {
     color: white !important;
     font-weight: 600;
     font-size: 20px;
+    padding: 12px 15px;
   }
 
   #btn-donate-panel:hover {
@@ -758,6 +773,10 @@ img {
 
 /* ====== Small phones (<= 420px) ====== */
 @media (max-width: 420px) {
+  .banner-area {
+    height: 40vh !important;
+  }
+
   .home-img_1 img {
     width: 70%;
   }
