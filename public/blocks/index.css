@@ -790,15 +790,11 @@ img {
     padding: 0;
   }
 
-  .donate-qr {
-    width: 150px;
-    height: 150px;
-  }
-
   .donate-panel {
-    width: 241px;
-    top: -22rem;
-    right: -15px;
+    width: 280px;
+    top: -24rem;
+    right: -36px;
+    height: 355px;
   }
 
   .about-title {
@@ -821,14 +817,12 @@ img {
     width: 80%;
   }
 
-  .donate-panel {
-    top: -22rem;
-    width: 222px;
-    right: -23px;
-  }
-
   .nav-donate {
     width: 11rem;
+  }
+
+  .donate-panel {
+    right: -53px;
   }
 
   .about-area p {
