@@ -195,6 +195,12 @@
   }
 }
 
+@media (max-width: 570px) {
+  .event-desc {
+    padding: 0;
+  }
+}
+
 @media (max-width: 487px) {
   .events-subtitle {
     padding: 20px 0;
