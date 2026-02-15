@@ -110,7 +110,7 @@ module.exports = async (req, res) => {
         </p>
         <p>
           Visit our website: 
-          <a href="https://rehobothawareness.org">rehobothawareness.org</a>
+          <a href="https://rehobothawareness.vercel.app">rehobothawareness.org</a>
         </p>
         <p style="font-size:12px;color:#777;text-align:center;">
         This email was sent automatically from our website contact form.
