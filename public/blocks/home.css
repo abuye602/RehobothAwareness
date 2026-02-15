@@ -85,6 +85,12 @@ footer {
 }
 
 footer p {
+  color: black;
   padding: 50px 0 40px 50px;
-  font-weight: 100px;
+}
+
+@media (max-width: 320px) {
+  #home-banner {
+    height: 40vh;
+  }
 }

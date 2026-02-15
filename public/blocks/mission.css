@@ -6,3 +6,9 @@
   align-items: flex-start;
   background: url("../img/mission.png") no-repeat center top / cover;
 }
+
+@media (max-width: 320px) {
+  #mission-banner {
+    height: 40vh;
+  }
+}

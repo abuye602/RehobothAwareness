@@ -1,6 +1,7 @@
 @import url("../blocks/home.css");
 @import url("../blocks/what-we-do.css");
 @import url("../blocks/mission.css");
+@import url("../blocks/upcoming-event.css");
 @import url("../blocks/contact.css");
 * {
   margin: 0;
@@ -56,6 +57,7 @@ header ul.nav {
 }
 
 header ul.nav li {
+  font-weight: 600;
   display: flex;
   margin: 0 30px;
   align-items: center;
@@ -615,12 +617,13 @@ img {
     display: block;
   }
 
+  .nav li a:hover {
+    color: none;
+  }
+
   .nav li a,
   .dropdown-btn {
-    background: transparent !important;
     border: none !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
     color: #2b2b2b !important;
     font-size: 28px;
     font-weight: 500;
@@ -629,6 +632,16 @@ img {
     text-align: center;
     width: auto;
     display: inline-block;
+  }
+
+  #btn-donate-panel {
+    color: white !important;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  #btn-donate-panel:hover {
+    background-color: #ca9e81;
   }
 
   .nav li a::after {

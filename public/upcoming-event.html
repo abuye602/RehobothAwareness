@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upcoming Events | Rehoboth Awareness Network</title>
+
+    <!-- Fonts (optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="blocks/index.css" />
+    <link rel="stylesheet" href="blocks/upcoming-event.css" />
+  </head>
+
+  <body class="body">
+    <header class="upcoming-event">
+      <a href="index.html">
+        <img src="img/business card.pdf (1).png" class="logo" alt="Logo" />
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-controls="siteNav"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open menu</span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Nav -->
+      <ul class="nav" id="siteNav">
+        <a href="index.html"
+          ><img class="navlogo" src="img/darklogo.png" alt=""
+        /></a>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="what-we-do.html">About</a></li>
+        <li><a href="mission.html">Mission</a></li>
+        <li><a class="active" href="upcoming-event.html">Upcoming Event</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+        <li class="nav-donate-wrapper">
+          <details class="donate-dropdown" id="donateDropdown">
+            <summary class="nav-donate">Donate</summary>
+
+            <div
+              class="donate-panel"
+              role="dialog"
+              aria-label="Donate via Zelle"
+            >
+              <p class="donate-title">Support Our Mission</p>
+              <p class="donate-subtitle">Secure donation via Zelle</p>
+
+              <img
+                src="img/Zelle.png"
+                alt="Zelle QR code for Rehoboth Awareness Network"
+                class="donate-qr"
+              />
+
+              <p class="donate-handle">
+                Zelle: <strong>your email or phone</strong>
+              </p>
+
+              <a
+                class="btn btn-donate-panel"
+                href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiUkVIT0JPVEggQVdBUkVORVNTIE5FVFdPUksiLCJhY3Rpb24iOiJwYXltZW50IiwidG9rZW4iOiI0ODAyOTI1NTQ5In0="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open Zelle
+              </a>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </header>
+
+    <main class="events-page">
+      <section class="events-hero">
+        <h1 class="events-title">Upcoming Events</h1>
+        <p class="events-subtitle">
+          Join us as we raise awareness, educate, encourage, and support
+          families and children with autism. Together, we can break stigma and
+          build a supportive, understanding community.
+        </p>
+      </section>
+
+      <section class="event-card">
+        <span class="event-pill">Next Event</span>
+
+        <h2 class="event-name">Rehoboth Awareness Network — First Meeting</h2>
+
+        <div class="event-meta">
+          <div class="meta-item">
+            <p class="meta-label">Date</p>
+            <p class="meta-value">April 4</p>
+          </div>
+          <div class="meta-item">
+            <p class="meta-label">Time</p>
+            <p class="meta-value">10:00 AM – 1:00 PM</p>
+          </div>
+        </div>
+
+        <div class="scripture">
+          “Speak up for those who cannot speak for themselves.” — Proverbs 31
+        </div>
+
+        <p class="event-desc">
+          We come together to raise awareness, educate, encourage, and support
+          families and children with autism. Together, we can break stigma and
+          build a supportive, understanding community.
+        </p>
+
+        <div class="event-actions">
+          <a class="btn-primary" href="contact.html">Ask a Question</a>
+          <a class="btn-secondary" href="contact.html">Email Us</a>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <footer>
+      <p>All Rights Reserved by Rehoboth Awareness Network</p>
+    </footer>
+    <script src="navbar.js"></script>
+  </body>
+</html>
