@@ -1,28 +1,99 @@
-.service-actions.vertical {
-  margin-top: 16px;
-  display: flex;
-  flex-direction: column; /* 👈 key */
-  align-items: flex-start;
-  gap: 12px;
+.action-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+  max-width: 620px;
+}
+
+.action-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.action-card--primary {
+  border-color: rgba(176, 138, 107, 0.45);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
+}
+
+.action-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(251, 178, 118, 0.18);
+  margin: 0 0 10px;
+  color: rgba(245, 243, 239, 0.95);
+}
+
+.action-title {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.action-desc {
+  padding: 0;
+  margin: 0 0 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(245, 243, 239, 0.86);
+}
+
+.dot {
+  opacity: 0.6;
+}
+
+/* Buttons */
+.btn-first,
+.btn-second {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.btn-first {
+  background: #b08a6b;
+  color: #fff;
+}
+.btn-first:hover {
+  background: #9a7559;
+}
+
+.btn-second {
+  margin-top: 7rem;
+  border: 2px solid #b08a6b;
+  color: #f5f3ef;
+  background: transparent;
+}
+
+.btn-second:hover {
+  background-color: var(--accent-dark) !important;
+  color: white;
+}
+
+@media (max-width: 760px) {
+  .action-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .meta-block {
+  padding: 15px 0;
   display: flex;
   flex-direction: column;
   gap: 6px;
   font-size: 15px;
   opacity: 0.9;
-}
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 10px;
-  border-radius: 15px;
-  font-size: 14px;
-  font-weight: 500;
-  background: rgba(111, 111, 111, 0.947);
-  color: #fff;
 }
 
 .meta-day {
@@ -48,7 +119,9 @@
   font-weight: 600;
   font-size: 15px;
   text-decoration: none;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
   background: #a3826c;
   color: #fff;
 }
@@ -132,7 +205,9 @@
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.08);
   margin-top: 10px;
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
 }
 
 .resource-link:hover {
@@ -183,7 +258,9 @@
   color: #fff;
   text-decoration: none;
   font-size: 14px;
-  transition: background 0.15s ease, transform 0.15s ease;
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
 }
 
 .connections-list a:hover {
@@ -317,7 +394,7 @@
 .mission-area h5 {
   font-size: 15px;
   font-weight: 500;
-  padding-bottom: 25px;
+  padding: 10px 0 15px;
 }
 
 .mission-area p {
@@ -394,21 +471,6 @@
 }
 
 @media (max-width: 767px) {
-  .service-actions.vertical {
-    margin-top: 16px;
-    display: flex;
-    gap: 12px;
-    flex-direction: column;
-  }
-
-  .pill {
-    font-size: 12px;
-  }
-
-  .meta-block {
-    font-size: 12px;
-  }
-
   .btn {
     font-size: 15px;
   }
@@ -459,9 +521,6 @@
   }
 
   /* Prayer/links blocks should not overflow */
-  .meta-times {
-    gap: 6px;
-  }
 }
 
 @media (max-width: 420px) {
