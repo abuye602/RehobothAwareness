@@ -189,7 +189,9 @@ header ul.nav a {
   font-weight: 550;
   cursor: pointer;
   list-style: none;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
 }
 
 .nav-donate:active {
@@ -417,7 +419,9 @@ img {
   background: #fff;
   border-radius: 2px;
   transform: translateX(-50%);
-  transition: transform 0.25s ease, opacity 0.2s ease;
+  transition:
+    transform 0.25s ease,
+    opacity 0.2s ease;
 }
 
 /* Bar positions */
@@ -767,7 +771,7 @@ img {
   }
 
   #about-mission li {
-    padding: 0;
+    padding: 0 15px;
   }
 }
 
