@@ -381,6 +381,7 @@
   display: flex;
   justify-content: space-between;
   gap: 10rem;
+  padding: 0 10px;
 }
 
 .mission-content .about-content {

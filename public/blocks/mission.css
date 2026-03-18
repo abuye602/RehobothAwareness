@@ -1,15 +1,297 @@
 #mission-banner {
   position: relative;
-  height: 80vh;
+  height: 64vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
   background: url("../img/mission.png") no-repeat center top / cover;
 }
 
-@media (max-width: 407px) {
-  #about p {
-    padding: 0;
+#mission-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.36) 0%,
+    rgba(0, 0, 0, 0.12) 60%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
+}
+
+.mission-kicker {
+  margin: 0 0 12px;
+  padding: 0;
+  text-align: left;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  color: #9c6f50;
+}
+
+.mission-intro h1 {
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
+  font-size: clamp(1.9rem, 3.6vw, 3rem);
+  line-height: 1.25;
+  color: #27201c;
+}
+
+.mission-subtitle {
+  margin: 18px 0 0;
+  max-width: 760px;
+  padding: 0;
+  text-align: left;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.8;
+  color: #3f3a35;
+}
+
+.mission-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: min(920px, 92%);
+  margin: 18px auto 18px;
+  position: relative;
+  z-index: 3;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 8px clamp(22px, 4vw, 56px) 4px;
+}
+
+.mission-intro p,
+.mission-intro h1 {
+  max-width: 760px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.mission-main {
+  background: linear-gradient(180deg, #f5f5f4 0%, #fff 48%, #f6f3f1 100%);
+  padding: 18px 0 90px;
+}
+
+.mission-story,
+.mission-resources {
+  display: block !important;
+  width: min(920px, 92%);
+  margin: 0 auto 18px;
+  padding: 48px clamp(22px, 4vw, 56px);
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid #ece6df;
+  box-shadow: 0 14px 36px rgba(36, 20, 6, 0.08);
+}
+
+.mission-story h2,
+.mission-resources h2 {
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  color: #27201c;
+}
+
+.mission-story p,
+.mission-resources p {
+  max-width: 760px;
+  margin: 20px 0 0;
+  padding: 0;
+  text-align: left;
+  font-size: 1.06rem;
+  line-height: 1.95;
+  color: #3f3a35;
+}
+
+.mission-story h2 {
+  max-width: 760px;
+  margin: 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #efe7df;
+}
+
+.mission-story .mission-lead {
+  margin-top: 22px;
+  font-size: 1.12rem;
+  line-height: 1.9;
+  color: #3f3a35;
+}
+
+.mission-copy {
+  max-width: 760px;
+  margin: 0;
+  display: block !important;
+  columns: unset !important;
+}
+
+.mission-copy p {
+  margin-top: 18px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.mission-copy p + p {
+  border-top: 1px solid #f1e8df;
+  padding-top: 16px;
+}
+
+.mission-gallery {
+  width: min(920px, 92%);
+  margin: 0 auto 24px;
+  padding: 24px clamp(16px, 4vw, 16px) 16px;
+}
+
+.mission-gallery h2 {
+  margin: 0 0 18px;
+  font-family: "Libre Baskerville", serif;
+  font-size: clamp(1.45rem, 2.8vw, 2rem);
+  color: #27201c;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+  max-width: 920px;
+}
+
+.gallery-item {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #e8ddd3;
+  box-shadow: 0 12px 30px rgba(36, 20, 6, 0.14);
+  background: #fff;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.mission-pillars {
+  padding: 0 20px;
+  max-width: 1080px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.pillar-card {
+  padding: 24px 22px;
+  border-radius: 18px;
+  background: #2f2721;
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(24, 13, 4, 0.2);
+}
+
+.pillar-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: "Libre Baskerville", serif;
+  line-height: 1.4;
+}
+
+.pillar-card p {
+  margin: 12px 0 0;
+  padding: 0;
+  text-align: left;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.resource-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 760px;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.resource-link {
+  display: block;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid #ddc9bb;
+  background: #fffaf7;
+  text-decoration: none;
+  text-align: left;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #5f3f2a;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.resource-link:hover {
+  transform: translateY(-3px);
+  border-color: #bf9c83;
+  box-shadow: 0 12px 28px rgba(97, 55, 27, 0.18);
+}
+
+@media (max-width: 980px) {
+  #mission-banner {
+    height: 56vh;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-pillars,
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  #mission-banner {
+    height: 44vh;
+  }
+
+  .mission-intro {
+    width: min(920px, 90%);
+    margin-top: 12px;
+    padding: 10px 20px 2px;
+  }
+
+  .mission-main {
+    padding-top: 8px;
+  }
+
+  .mission-story,
+  .mission-resources {
+    width: min(920px, 90%);
+    padding: 34px 20px;
+    border-radius: 18px;
+  }
+
+  .mission-gallery {
+    width: min(920px, 90%);
+    padding: 18px 20px 10px;
+  }
+
+  .mission-story h2 {
+    padding-bottom: 12px;
+  }
+
+  .mission-story .mission-lead {
+    font-size: 1.03rem;
   }
 }
 

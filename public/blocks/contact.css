@@ -8,7 +8,7 @@
   background: url("../img/contact.png") no-repeat center center / cover;
 }
 
-section {
+#contact-area {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -133,7 +133,7 @@ textarea:focus {
     font-size: 20px;
   }
 
-  section {
+  #contact-area {
     padding: 40px 24px;
   }
 
@@ -157,7 +157,7 @@ textarea:focus {
     padding: 15px;
   }
 
-  section {
+  #contact-area {
     display: flex;
     flex-direction: column;
   }
