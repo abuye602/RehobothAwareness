@@ -221,7 +221,7 @@
   margin-right: auto;
 }
 
-.resource-link {
+.mresource-link {
   display: block;
   padding: 16px;
   border-radius: 14px;
@@ -238,7 +238,7 @@
     border-color 0.2s ease;
 }
 
-.resource-link:hover {
+.mresource-link:hover {
   transform: translateY(-3px);
   border-color: #bf9c83;
   box-shadow: 0 12px 28px rgba(97, 55, 27, 0.18);

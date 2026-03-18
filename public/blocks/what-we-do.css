@@ -193,7 +193,7 @@
 }
 
 /* The link “card” */
-.mresource-link {
+.resource-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -210,7 +210,7 @@
     opacity 0.15s ease;
 }
 
-.mresource-link:hover {
+.resource-link:hover {
   transform: translateY(-1px);
   opacity: 0.95;
 }
