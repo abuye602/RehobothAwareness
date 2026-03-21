@@ -40,11 +40,12 @@
 }
 
 .events-title {
+  font-family: "Libre Baskerville", serif;
   font-size: clamp(40px, 5vw, 64px);
   font-weight: 600;
   letter-spacing: 1px;
   line-height: 0.95;
-  margin: 0;
+  margin-top: 5rem;
 }
 
 .events-subtitle {
@@ -81,6 +82,7 @@
 }
 
 .event-name {
+  font-family: "Libre Baskerville", serif;
   font-size: clamp(28px, 3.2vw, 44px);
   font-weight: 600;
   margin: 0 0 14px;
@@ -115,7 +117,7 @@
   padding: 0;
   margin: 0;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* Scripture highlight like your rounded “pill/box” feel */
@@ -126,7 +128,7 @@
   background: rgb(176 138 107 / 18%);
   border-radius: 14px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.6;
 }
 
@@ -151,13 +153,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 18px;
+  padding: 12px 14px;
   border-radius: 14px;
   font-weight: 800;
   text-decoration: none;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: transform 0.12s ease, background 0.12s ease,
+  transition:
+    transform 0.12s ease,
+    background 0.12s ease,
     border-color 0.12s ease;
 }
 
@@ -209,7 +213,7 @@
 
 @media (max-width: 459px) {
   .events-hero {
-    padding: 40px 0;
+    padding: 0 0 40px;
   }
 
   .events-title {
