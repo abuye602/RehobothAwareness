@@ -309,6 +309,29 @@ body {
   overflow-x: hidden;
 }
 
+.reveal-ready .reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-ready .reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready .reveal-on-scroll,
+  .reveal-ready .reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* Make images flexible by default */
 img {
   max-width: 100%;

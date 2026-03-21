@@ -99,4 +99,35 @@ document.addEventListener("DOMContentLoaded", () => {
       aboutBtn?.setAttribute("aria-expanded", "false");
     }
   });
+
+  const revealTargets = document.querySelectorAll(
+    "section, .mission-content, .action-card, .resource-link, .event-card, footer"
+  );
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (!prefersReducedMotion && revealTargets.length > 0) {
+    document.body.classList.add("reveal-ready");
+
+    revealTargets.forEach((target) => {
+      target.classList.add("reveal-on-scroll");
+    });
+
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("revealed");
+          observer.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.18, rootMargin: "0px 0px -5% 0px" }
+    );
+
+    revealTargets.forEach((target) => {
+      revealObserver.observe(target);
+    });
+  }
 });
